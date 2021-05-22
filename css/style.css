@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+p,
+.headline,
+.person-info,
+.person-info .picture,
+.person-info .name-job,
+.description {
+  background-color: transparent;
+}
+
+/* Main container */
+
+.testimonials-container {
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 80%;
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item2 item5"
+    "item3 item4 item4 item5";
+  grid-gap: 1.5rem;
+}
+
+/* Testimonial */
+
+.testimonial {
+  background-color: hsl(263, 55%, 52%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.person-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.person-info .picture img {
+  border-radius: 50%;
+  width: 70%;
+  border: 4px solid hsla(264, 83%, 70%, 0.801);
+}
+
+.person-info .name-job {
+  color: hsl(210, 46%, 95%);
+}
+
+.person-info .name-job p:last-of-type {
+  opacity: 50%;
+}
+
+.headline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.2rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+  opacity: 70%;
+  line-height: 1.5rem;
+}
+
+/* Grid areas */
+
+.item1 {
+  grid-area: item1;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 80% 0%;
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+.item4 {
+  grid-area: item4;
+}
+
+.item5 {
+  grid-area: item5;
+}
+
+/* Area intricacies */
+.item2 {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.item2 .person-info .picture img {
+  border-radius: 50%;
+  width: 70%;
+  border: none;
+}
+
+.item3 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.item3 .person-info .picture img {
+  border-radius: 50%;
+  width: 70%;
+  border: none;
+}
+
+.item3 .person-info .name-job {
+  color: hsl(217, 19%, 35%);
+}
+
+.item3 .headline,
+.item3 .description {
+  color: hsl(217, 19%, 35%);
+}
+
+.item4 {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.item5 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.item5 .person-info .picture img {
+  border-radius: 50%;
+  width: 70%;
+  border: none;
+}
+
+.item5 .person-info .name-job {
+  color: hsl(217, 19%, 35%);
+}
+
+.item5 .headline,
+.item5 .description {
+  color: hsl(217, 19%, 35%);
+}
+
+@media (max-width: 900px) {
+  .testimonials-container {
+    grid-template-areas: "item1" "item2" "item3" "item4" "item5";
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
